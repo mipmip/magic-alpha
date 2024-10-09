@@ -1,0 +1,74 @@
+html {
+    background-color: rgba(27, 38, 54, 1);
+    text-align: center;
+    color: white;
+}
+
+body {
+    margin: 0;
+    color: white;
+    font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+@font-face {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 400;
+    src: local(""),
+    url("assets/fonts/nunito-v16-latin-regular.woff2") format("woff2");
+}
+
+#app {
+    height: 100vh;
+    text-align: center;
+}
+
+.ui {
+  position: fixed;
+  top: 0.5em;
+  left: 0.5em;
+  z-index: 3;
+  padding: 1.5em;
+  background-color: rgba(50, 50, 50, 0.5);
+  color: white;
+  border: 1px solid grey;
+}
+.ui a {
+  border: 1px solid black;
+  border-radius: 3px;
+  background-color: #dddddd;
+  padding: 0.5em;
+  margin-top: 16px;
+}
+
+.wrapper {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: scroll;
+  left: 0;
+  top: 0;
+  background-color: black;
+}
+
+.content {
+  position: relative;
+}
+.canvas {
+  position: absolute;
+}
+.canvas #interactionCanvas {
+  z-index: 2;
+}
+.canvas:hover {
+  cursor: default;
+}
+.picture {
+  position: absolute;
+  visibility: hidden;
+}
+.add-mode {
+  cursor: copy;
+}

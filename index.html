@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <script src="./MagicWand.js"></script>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" type="text/css" href="./index.css" />
+  </head>
+  <body>
+
+    <div class="ui">
+      <div>
+        <div>
+          <input
+            id="file-upload"
+            type="file"
+            accept="image/*"
+            onchange="onImageUploaded(this)"
+          />
+        </div>
+
+        <hr />
+
+        <button onclick="modifyPixels('000000', 0.0); resetMask();">
+          Delete selection (Delete key)
+        </button>
+        <button onclick="resetMask()">Reset (Escape key)</button>
+      </div>
+
+      <hr />
+
+      <div>
+        <div>
+          <label for="blurRadiu">Blur radius</label>
+          <input
+            id="blurRadius"
+            type="number"
+            onchange="onRadiusChange.apply(this, arguments)"
+            step="1"
+          />
+        </div>
+        <div id="threshold"></div>
+      </div>
+      <div>
+        <ul>
+          <li>Click on image to select transparent areas</li>
+          <li>Drag to increase threshold</li>
+        </ul>
+      </div>
+      <div>
+        <a href="" onClick="initDownload(this)" download="result.png"
+          >Download Result PNG</a
+        >
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <div class="content">
+        <img id="original-image" class="picture" />
+        <canvas class="canvas" id="resultCanvas"></canvas>
+        <canvas
+          class="canvas"
+          id="interactionCanvas"
+          onmouseup="onMouseUp.apply(this, arguments)"
+          onmousedown="onMouseDown.apply(this, arguments)"
+          onmousemove="onMouseMove.apply(this, arguments)"
+        ></canvas>
+      </div>
+    </div>
+  </body>
+</html>

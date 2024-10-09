@@ -1,0 +1,51 @@
+.ui {
+  position: fixed;
+  top: 0.5em;
+  left: 0.5em;
+  z-index: 3;
+  padding: 1.5em;
+  background-color: rgba(50, 50, 50, 0.5);
+  color: white;
+  border: 1px solid grey;
+}
+.ui a {
+  border: 1px solid black;
+  border-radius: 3px;
+  background-color: #dddddd;
+  padding: 0.5em;
+  margin-top: 16px;
+}
+
+.wrapper {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: scroll;
+  left: 0;
+  top: 0;
+  background-color: black;
+}
+
+.content {
+  position: relative;
+}
+.canvas {
+  position: absolute;
+}
+.canvas #interactionCanvas {
+  z-index: 2;
+}
+.canvas:hover {
+  cursor: default;
+}
+.picture {
+  position: absolute;
+  visibility: hidden;
+}
+// #file-upload {
+//   display: none;
+// }
+.add-mode {
+  cursor: copy;
+}
+
